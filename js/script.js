@@ -115,6 +115,15 @@ const icons = [
 const row = document.querySelector('.row');
 let rowHtml = '';
 
+
+
+selectMenu.addEventListener('change', selectOption);
+
+function selectOption(){
+    const selectMenu = document.getElementById('selectMenu').value;
+
+    console.log(selectMenu);
+}
 icons.forEach((icons) => {
     let cardTpl = `<div class="col-5 col-sm-3">
     <div class="card m-2  d-flex justify-content-center ">
