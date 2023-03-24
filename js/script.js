@@ -117,15 +117,9 @@ let rowHtml = '';
 
 
 
-selectMenu.addEventListener('change', selectOption);
 
-function selectOption(){
-    const selectMenu = document.getElementById('selectMenu').value;
-
-    console.log(selectMenu);
-}
 icons.forEach((icons) => {
-    let cardTpl = `<div class="col-5 col-sm-3">
+    let cardTpl = `<div class="col-5 col-lg-3 col-sm-2">
     <div class="card m-2  d-flex justify-content-center ">
        
             <i class="fa-${icons.name} fa-${icons.family}" style="color:${icons.color}"></i>
@@ -137,3 +131,32 @@ icons.forEach((icons) => {
 })
 
 row.innerHTML += rowHtml;
+
+selectMenu.addEventListener('change', selectOption);
+
+function selectOption(){
+  const selectMenu = document.getElementById('selectMenu').value;
+
+    console.log(selectMenu);
+}
+
+
+function drawIcon(selectOption){
+    const filterICon = icons.filter((value) =>{
+        for(i = 1; i < icons.length; i++){
+    
+            if(icons.type === selectMenu.value || selectMenu.value === 'all'){
+                return true;
+            } else {
+                return false;
+            }
+        
+        }
+    })
+console.log(filterICon)
+}
+  
+
+
+
+
