@@ -140,21 +140,20 @@ function selectOption(){
     console.log(selectMenu);
 }
 
+const filterICon = [];
 
 function drawIcon(selectOption){
     const filterICon = icons.filter((value) =>{
-        for(i = 1; i < icons.length; i++){
-    
+
             if(icons.type === selectMenu.value || selectMenu.value === 'all'){
                 return true;
             } else {
                 return false;
             }
         
-        }
-    })
+        })
 console.log(filterICon)
-}
+    }
   
 
 
