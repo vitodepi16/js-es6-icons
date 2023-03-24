@@ -117,7 +117,7 @@ let rowHtml = '';
 
 
 
-function drawCard(){
+function drawCard(icons){
     icons.forEach((icons) => {
     let cardTpl = `<div class="col-5 col-lg-3 col-sm-2">
     <div class="card m-2  d-flex justify-content-center ">
@@ -129,10 +129,11 @@ function drawCard(){
     `
     rowHtml += cardTpl;
 })
+row.innerHTML += rowHtml;
 }
 
+drawCard(icons)
 
-row.innerHTML += rowHtml;
 
 selectMenu.addEventListener('change', selectOption);
 
