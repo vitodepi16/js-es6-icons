@@ -117,8 +117,8 @@ let rowHtml = '';
 
 
 
-
-icons.forEach((icons) => {
+function drawCard(){
+    icons.forEach((icons) => {
     let cardTpl = `<div class="col-5 col-lg-3 col-sm-2">
     <div class="card m-2  d-flex justify-content-center ">
        
@@ -129,6 +129,8 @@ icons.forEach((icons) => {
     `
     rowHtml += cardTpl;
 })
+}
+
 
 row.innerHTML += rowHtml;
 
@@ -145,10 +147,10 @@ const filterICon = [];
 function drawIcon(selectOption){
     const filterICon = icons.filter((value) =>{
 
-            if(icons.type === selectMenu.value || selectMenu.value === 'all'){
-                return true;
+            if(selectMenu.value === 'all'){
+                drawCard();
             } else {
-                return false;
+               
             }
         
         })
