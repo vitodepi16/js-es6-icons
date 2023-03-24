@@ -112,3 +112,21 @@ const icons = [
         color: 'blue'
     }
 ];
+const row = document.querySelector('.row');
+let rowHtml = '';
+
+icons.forEach((icons) => {
+    let cardTpl = `      <div class="col-5">
+    <div class="card">
+       
+            <i class="fa-${icons.name} fa-${icons.family}"></i>
+            <h4>${icons.name}</h4>
+     
+
+    </div>
+</div>
+    `
+    rowHtml += cardTpl;
+})
+
+row.innerHTML += rowHtml;
