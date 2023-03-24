@@ -116,13 +116,11 @@ const row = document.querySelector('.row');
 let rowHtml = '';
 
 icons.forEach((icons) => {
-    let cardTpl = `      <div class="col-5">
-    <div class="card">
+    let cardTpl = `<div class="col-5 col-sm-3">
+    <div class="card m-2  d-flex justify-content-center ">
        
-            <i class="fa-${icons.name} fa-${icons.family}"></i>
+            <i class="fa-${icons.name} fa-${icons.family}" style="color:${icons.color}"></i>
             <h4>${icons.name}</h4>
-     
-
     </div>
 </div>
     `
