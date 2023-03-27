@@ -113,7 +113,6 @@ const icons = [
   },
 ];
 const row = document.querySelector(".row");
-let rowHtml = "";
 
 function drawCard(icon) {
   let rowHtml = "";
