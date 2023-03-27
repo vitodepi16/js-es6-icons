@@ -118,7 +118,7 @@ let rowHtml = "";
 function drawCard(icon) {
   let rowHtml = "";
   icon.forEach(function (icons) {
-    let cardTpl = `<div class="col-5 col-lg-3 col-sm-2">
+    let cardTpl = `<div class=" col-lg-3 col-sm-12 col-md-4">
     <div class="card m-2  d-flex justify-content-center ">
        
             <i class="fa-${icons.name} fa-${icons.family}" style="color:${icons.color}"></i>
